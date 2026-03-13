@@ -1,5 +1,5 @@
 .accordion-body{
-  max-height:500px;
+  width:100%;
   overflow:hidden;
   transition:max-height 0.5s ease;
   text-align:center;
@@ -7,8 +7,11 @@
 
 .donation-img{
   width:100%;
-  height:250px;      /* controls visible area */
-  object-fit:contain; /* zooms out so full image fits */
+  max-width:500px;   
+  height:auto;       
+  object-fit:contain;
   margin-top:10px;
   display:block;
+  margin-left:auto;
+  margin-right:auto;
 }
