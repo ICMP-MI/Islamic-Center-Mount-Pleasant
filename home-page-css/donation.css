@@ -1,15 +1,14 @@
 .accordion-body{
-  max-height:500px;   /* large enough so content shows */
+  max-height:500px;
   overflow:hidden;
   transition:max-height 0.5s ease;
+  text-align:center;
 }
 
 .donation-img{
   width:100%;
-  height:auto;
+  height:250px;      /* controls visible area */
+  object-fit:contain; /* zooms out so full image fits */
   margin-top:10px;
-  transform:scale(1);     /* normal size */
-  opacity:1;              /* visible */
-  transition:transform 0.5s ease, opacity 0.5s ease;
-  object-fit:contain;     /* ensures full image fits */
+  display:block;
 }
