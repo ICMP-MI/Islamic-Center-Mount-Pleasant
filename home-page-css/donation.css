@@ -1,0 +1,22 @@
+.accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.donation-img {
+  width: 100%;
+  margin-top: 10px;
+  transform: scale(0.8);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.accordion-content.active .accordion-body {
+  max-height: 500px;
+}
+
+.accordion-content.active .donation-img {
+  transform: scale(1);
+  opacity: 1;
+}
