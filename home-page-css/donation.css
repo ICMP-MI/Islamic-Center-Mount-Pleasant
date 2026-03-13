@@ -1,22 +1,30 @@
-.accordion-body {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease;
+.accordion-header{
+  display:flex;
+  justify-content:space-between;
+  cursor:pointer;
 }
 
-.donation-img {
-  width: 100%;
-  margin-top: 10px;
-  transform: scale(0.8);
-  opacity: 0;
-  transition: transform 0.5s ease, opacity 0.5s ease;
+.accordion-body{
+  max-height:0;
+  overflow:hidden;
+  transition:max-height 0.5s ease;
 }
 
-.accordion-content.active .accordion-body {
-  max-height: 500px;
+.donation-img{
+  width:100%;
+  height:auto;
+  margin-top:10px;
+  transform:scale(0.9);   /* start slightly zoomed out */
+  opacity:0;
+  transition:transform 0.5s ease, opacity 0.5s ease;
+  object-fit:contain;     /* ensures full image fits */
 }
 
-.accordion-content.active .donation-img {
-  transform: scale(1);
-  opacity: 1;
+.accordion-content.active .accordion-body{
+  max-height:800px; /* increase space so image fits */
+}
+
+.accordion-content.active .donation-img{
+  transform:scale(1);  /* zoom to normal size */
+  opacity:1;
 }
