@@ -16,3 +16,11 @@
   margin-right:auto;
   cursor:pointer;
 }
+
+.donation-link{
+  display:inline-block;
+  margin-top:10px;
+  color:#0066cc;
+  font-weight:bold;
+  text-decoration:underline;
+}
