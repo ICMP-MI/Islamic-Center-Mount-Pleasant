@@ -27,47 +27,46 @@ fetch('./mainAnnouncement.json')
         `;
 
 
-        // Initialize annoucementDetailsHTML to hold all html for annoucnement details
-        let annoucementDetailsHTML;
-
-        // If statement checking to see if link exists, dependent on that annoucnementDetailsHTML will have 2 different instantiations
+        // If statement checking to see if link exists, dependent on that the popup will include an extra link line
+        let annoucementLinkHTML = "";
         if(json.externalLinkIfAnyOP) {
-          annoucementDetailsHTML = `
-          <div class="announcement-popup-overlay" id="popup">
-            <div class="announcement-popup">
-              <div class="popup-title">${json.title}</div>
-              <div class="popup-date-OP">${json.eventDateOP}</div>
-              <div class="popup-time-OP">${json.eventTimeOP}</div>
-              <div class="popup-message">${json.message}</div>
-              <a class="popup-external-link-OP" href="${json.externalLinkIfAnyOP}">Link Here</a>
-              
-              <div class="popup-close" onclick="closePopup()">Close</div>
-            </div>
-          </div>
-        `;
-        } else {
-          annoucementDetailsHTML = `
-          <div class="announcement-popup-overlay" id="popup">
-            <div class="announcement-popup">
-              <div class="popup-title">${json.title}</div>
-              <div class="popup-date-OP">${json.eventDateOP}</div>
-              <div class="popup-time-OP">${json.eventTimeOP}</div>
-              <div class="popup-message">${json.message}</div>
-              
-              <div class="popup-close" onclick="closePopup()">Close</div>
-            </div>
-          </div>
-        `;
+          annoucementLinkHTML = `<a class="popup-external-link-OP" href="${json.externalLinkIfAnyOP}">Link Here</a>`;
         }
 
+        // Initialize annoucementDetailsHTML to hold all html for annoucnement details
+        let annoucementDetailsHTML = `
+          <div class="announcement-popup-overlay" id="popup">
+            <div class="announcement-popup">
+              <h3 class="popup-title">${json.title}</h3>
+              <div class="popup-date-OP">${json.eventDateOP}</div>
+              <div class="popup-time-OP">${json.eventTimeOP}</div>
+              <div class="popup-message">${json.message}</div>
+              ${annoucementLinkHTML}
+              <button type="button" class="popup-close">Close</button>
+            </div>
+          </div>
+        `;
+
         // Set the generated html to their respective empty div on home.html
-        document.getElementById("generative-announcement-header").innerHTML = annoucementHeaderHTML;
+        // Guarded in case generative-announcement-header is ever removed/commented out again, so the popup below still populates independently
+        const announcementHeaderEl = document.getElementById("generative-announcement-header");
+        if (announcementHeaderEl) {
+          announcementHeaderEl.innerHTML = annoucementHeaderHTML;
+        }
         document.getElementById("generative-popup").innerHTML = annoucementDetailsHTML;
+
+        const popupCloseBtn = document.querySelector(".popup-close");
+        if (popupCloseBtn) {
+          popupCloseBtn.addEventListener("click", closePopup);
+        }
 
         console.log("Backend Announcements Loaded Succesfully")
       } else {
         console.log("No Annoucements")
       }
+    })
+    .catch((error) => {
+      console.error("Failed to load announcement data:", error);
     });
 
 

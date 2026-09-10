@@ -2,10 +2,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>ICMP</title>
 
@@ -20,6 +20,7 @@
 
     <!-- All Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
 
     
 
@@ -33,23 +34,23 @@
 
       <div class="logo-icon-container">
         <div class="logo-img-container">
-          <img src="images-and-icons/MTPIC-Gold_text-removebg-preview.png" alt="">
+          <img src="images-and-icons/MTPIC-Gold_text-removebg-preview.png" alt="Islamic Center of Mount Pleasant logo">
         </div>
       </div>
 
-      <div class="menu-icon-container">
+      <button type="button" class="menu-icon-container">
         <img src="images-and-icons/hamburger-menu-white.png" alt="">
-      </div>
+      </button>
 
     </div>
 
 
-    <!-- This is the Announcements Div, generated thrugh JavaScript -->
-    <!-- If backend has annoucements to showcase this div will be active otherwise its always hidden -->
+    <!-- This is the Announcements Div, populated by announcement.js -->
+    <!-- If mainAnnouncement.json has a valid announcement this div shows a clickable header; otherwise it stays empty/hidden -->
     <!-- Can only display one single announcement -->
-    <!--<div id="generative-announcement-header">
-    
-    </div>-->
+    <div id="generative-announcement-header">
+
+    </div>
 
     <!-- Popup overlay and content -->
     <div id="generative-popup">
@@ -82,8 +83,8 @@
 
       <!-- Iqama Times STARTS HERE -->
 
-      <div class="prayer-times-div"> <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
-        <p class="prayer-times-title"> Iqama Times</p>
+      <div class="prayer-times-div">
+        <h2 class="prayer-times-title"> Iqama Times</h2>
         <div style="height: 3px; background-color: maroon; width: 100%; margin: 3px auto;"></div>
         <div class="prayer-times-line">Fajr :&nbsp;&nbsp;&nbsp;&nbsp;6:45 AM</div>
         <div class="prayer-times-line">Sunrise :&nbsp;&nbsp;&nbsp;&nbsp;08:04 AM</div>
@@ -91,7 +92,6 @@
         <div class="prayer-times-line">Asr :&nbsp;&nbsp;&nbsp;&nbsp;03:30 PM</div>
         <div class="prayer-times-line">Maghreb :&nbsp;&nbsp;&nbsp;&nbsp;5 min after athan</div>
         <div class="prayer-times-line">Ishaa :&nbsp;&nbsp;&nbsp;&nbsp;7:30 PM</div>
-       </p>
       </div>
 
       <!-- Iqama Times ENDS HERE -->
@@ -102,10 +102,10 @@
         
         <div class="accordion">
           <div class="accordion-content">
-            <header>
+            <button type="button">
               <span class="title">Jummah and Khutbah Information</span>
               <i class="fa-solid fa-plus"></i>
-            </header>
+            </button>
 
             <p class="description">
               Khutbah starts at 2:00PM on Fridays and Jummah prayer is dependent on our Khateebs, but usual start time is 2:25PM
@@ -113,38 +113,38 @@
           </div>
 
           <div class="accordion-content">
-            <header class="accordion-header">
+            <button type="button" class="accordion-header">
               <span class="title">Donations</span>
-            </header>
+            </button>
           
             <div class="accordion-body">
               <a href="https://gofund.me/519aa6a79" target="_blank" rel="noopener noreferrer">
                 <img src="images-and-icons/Donation.jpeg" class="donation-img" alt="Donation">
               </a>
 
-              <a href="https://gofund.me/519aa6a79" class="donation-link" target="_blank">
+              <a href="https://gofund.me/519aa6a79" class="donation-link" target="_blank" rel="noopener noreferrer">
                 Go To Fund Link
               </a>
             </div>
           </div>
 
           <div class="accordion-content">
-            <header>
+            <button type="button">
               <span class="title">Join ICMP WhatsApp Community</span>
               <i class="fa-solid fa-plus"></i>
-            </header>
+            </button>
 
             <p class="description">
               Please fill out the following google form. Upon completion you will be provided with a link to join WhatsApp.
               <a href="https://docs.google.com/forms/d/e/1FAIpQLSd5AXSum1B4Jo7anbOxoQfduszcoxyaMz2PZgaHKpZsyVDNQA/viewform?usp=publish-editor">Fill Out Form Here</a>
             </p>
           </div>
-          
+
           <div class="accordion-content">
-            <header>
+            <button type="button">
               <span class="title">Eid Information</span>
               <i class="fa-solid fa-plus"></i>
-            </header>
+            </button>
 
             <p class="description">
               Eid Takbir starts at 8:30 AM followed by Eid Salat at 9:00 AM.
@@ -170,9 +170,9 @@
 
     <div class="History">
 
-      <p class="historytext">
+      <h2 class="historytext">
         Historical Background of the Mt. Pleasant Center
-      </p>
+      </h2>
       <p class="text">
         As more Muslim Students began coming to Central Michigan University
         (CMU), many made Mt. Pleasant their second home. They felt a strong sense
@@ -218,7 +218,7 @@
 
     <div id="menu-popup" class="menu-popup hidden">
       <div class="menu-content">
-        <span class="close-btn">&times;</span>
+        <button type="button" class="close-btn">&times;</button>
         <!-- 
         <ul>
           <li><a href="home.html">Home</a></li>

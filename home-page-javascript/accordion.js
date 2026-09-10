@@ -6,18 +6,27 @@ document.addEventListener("DOMContentLoaded", () => {
   const accordionContents = document.querySelectorAll(".accordion-content");
 
   accordionContents.forEach((item, index) => {
-    let header = item.querySelector("header");
+    let header = item.querySelector("button");
     header.addEventListener("click", () => {
       item.classList.toggle("open");
 
       let description = item.querySelector(".description");
+      let icon = item.querySelector("i");
       if(item.classList.contains(`open`)) {
-        description.style.height = `${description.scrollHeight}px`;
-        item.querySelector("i").classList.replace("fa-plus", "fa-minus");
+        if (description) {
+          description.style.height = `${description.scrollHeight}px`;
+        }
+        if (icon) {
+          icon.classList.replace("fa-plus", "fa-minus");
+        }
       }
       else {
-        description.style.height = "0px";
-        item.querySelector("i").classList.replace("fa-minus", "fa-plus");
+        if (description) {
+          description.style.height = "0px";
+        }
+        if (icon) {
+          icon.classList.replace("fa-minus", "fa-plus");
+        }
       }
       //console.log(description);
 
@@ -31,8 +40,13 @@ document.addEventListener("DOMContentLoaded", () => {
         item2.classList.remove("open");
 
         let des = item2.querySelector(".description");
-        des.style.height = "0px";
-        item2.querySelector("i").classList.replace("fa-minus", "fa-plus");
+        if (des) {
+          des.style.height = "0px";
+        }
+        let icon2 = item2.querySelector("i");
+        if (icon2) {
+          icon2.classList.replace("fa-minus", "fa-plus");
+        }
 
       }
     })

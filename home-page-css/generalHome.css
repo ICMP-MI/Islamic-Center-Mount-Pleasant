@@ -6,11 +6,6 @@
   flex-direction: row;
 }
 
-.prayer-times-div {
-  background-color: rgb(106, 0, 50);
-  flex: 1;
-}
-
 .accordion-info-div {
   background-color: rgb(106, 0, 50);
   flex: 1;
@@ -53,6 +48,7 @@
   padding-bottom: 0px;
   margin-bottom: .625rem,;
   margin-top: .625rem;
+  margin-bottom: 50px;
 
 }
 
@@ -75,6 +71,8 @@
 .historytext{
   font-size: 1.5rem;
   font-weight: bold;
+  margin-top: 24px;
+  margin-bottom: 24px;
   margin-right: 20px;
   text-align: center;
   color: white;
@@ -144,6 +142,11 @@
 }
 
 .close-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
   position: absolute;
   top: 20px;
   right: 30px;

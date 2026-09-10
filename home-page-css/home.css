@@ -50,6 +50,9 @@ body {
 }
 
 .menu-icon-container {
+  background: none;
+  border: none;
+  font: inherit;
   flex: 1;
   display: flex;
   justify-content: end;
@@ -122,16 +125,6 @@ body {
   font-size: 1.563rem;
   color: white
 }
-
-.bismillah-arabic-container {
-  
-}
-
-.bismillah-text-container {
-
-}
-
-
 
 /* Bismillah Section Styling Ends Here */
 
