@@ -122,77 +122,79 @@
     <!-- Prayer Times ENDS HERE -->
 
 
-    <!-- General Information Div: Split into two sections - donations and accordion tabs -->
+    <!-- Donation/Event Featured Section STARTS HERE -->
+    <!-- Flyer thumbnail opens a full-size lightbox (see flyer-lightbox.js); no page navigation occurs. -->
 
-    <div class="general-information">
-
-      <!-- Donation Section STARTS HERE -->
-
-      <div class="donation-info-div">
-        <h2 class="donation-info-title">Donations</h2>
-        <a href="https://gofund.me/519aa6a79" target="_blank" rel="noopener noreferrer">
-          <img src="images-and-icons/Donation.jpeg" class="donation-img" alt="Donation">
-        </a>
-
-        <a href="https://gofund.me/519aa6a79" class="donation-link" target="_blank" rel="noopener noreferrer">
+    <!-- Hidden by default; donation-event.js reveals this only after confirming mainDonation.json has valid, non-expired content -->
+    <div class="featured-donation" id="donation-event-section" style="display: none;">
+      <div class="featured-donation-media">
+        <button type="button" class="flyer-thumbnail-btn" id="flyer-open-btn">
+          <img src="images-and-icons/Donation.jpeg" class="flyer-thumbnail-img" id="donation-thumbnail-img" alt="Fundraiser Iftar flyer">
+          <span class="flyer-thumbnail-overlay">View Full Flyer</span>
+        </button>
+      </div>
+      <div class="featured-donation-content">
+        <h2 class="featured-donation-title" id="donation-title">Donations</h2>
+        <a href="https://gofund.me/519aa6a79" class="featured-donation-cta" id="donation-cta-link" target="_blank" rel="noopener noreferrer">
           Go To Fund Link
         </a>
       </div>
-
-      <!-- Donation Section ENDS HERE -->
-
-      <!-- Accordion Block STARTS HERE-->
-
-      <div class="accordion-info-div">
-
-        <div class="accordion">
-          <div class="accordion-content">
-            <button type="button">
-              <span class="title">Jummah and Khutbah Information</span>
-              <i class="fa-solid fa-plus"></i>
-            </button>
-
-            <p class="description">
-              Khutbah starts at 2:00PM on Fridays and Jummah prayer is dependent on our Khateebs, but usual start time is 2:25PM
-            </p>
-          </div>
-
-          <div class="accordion-content">
-            <button type="button">
-              <span class="title">Join ICMP WhatsApp Community</span>
-              <i class="fa-solid fa-plus"></i>
-            </button>
-
-            <p class="description">
-              Please fill out the following google form. Upon completion you will be provided with a link to join WhatsApp.
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSd5AXSum1B4Jo7anbOxoQfduszcoxyaMz2PZgaHKpZsyVDNQA/viewform?usp=publish-editor">Fill Out Form Here</a>
-            </p>
-          </div>
-
-          <div class="accordion-content">
-            <button type="button">
-              <span class="title">Eid Information</span>
-              <i class="fa-solid fa-plus"></i>
-            </button>
-
-            <p class="description">
-              Eid Takbir starts at 8:30 AM followed by Eid Salat at 9:00 AM.
-            </p>
-          </div>
-
-          
-
-          
-        </div>
-
-
-      </div>
-
-      <!-- Accordion Block ENDS HERE-->
-
     </div>
 
-    <!-- General Information Section ENDS HERE -->
+    <!-- Full-size flyer lightbox, hidden until opened via the thumbnail above -->
+    <div class="flyer-lightbox-overlay" id="flyer-lightbox">
+      <div class="flyer-lightbox-content">
+        <button type="button" class="flyer-lightbox-close" id="flyer-close-btn" aria-label="Close flyer">&times;</button>
+        <img src="images-and-icons/Donation.jpeg" class="flyer-lightbox-img" id="donation-lightbox-img" alt="Fundraiser Iftar flyer">
+      </div>
+    </div>
+
+    <!-- Donation/Event Featured Section ENDS HERE -->
+
+
+    <!-- Community Information / Accordion Section STARTS HERE -->
+
+    <div class="info-section">
+      <h2 class="info-section-title">Community Information</h2>
+
+      <div class="accordion">
+        <div class="accordion-content">
+          <button type="button">
+            <span class="title">Jummah and Khutbah Information</span>
+            <i class="fa-solid fa-plus"></i>
+          </button>
+
+          <p class="description">
+            Khutbah starts at 2:00PM on Fridays and Jummah prayer is dependent on our Khateebs, but usual start time is 2:25PM
+          </p>
+        </div>
+
+        <div class="accordion-content">
+          <button type="button">
+            <span class="title">Join ICMP WhatsApp Community</span>
+            <i class="fa-solid fa-plus"></i>
+          </button>
+
+          <p class="description">
+            Please fill out the following google form. Upon completion you will be provided with a link to join WhatsApp.
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSd5AXSum1B4Jo7anbOxoQfduszcoxyaMz2PZgaHKpZsyVDNQA/viewform?usp=publish-editor">Fill Out Form Here</a>
+          </p>
+        </div>
+
+        <div class="accordion-content">
+          <button type="button">
+            <span class="title">Eid Information</span>
+            <i class="fa-solid fa-plus"></i>
+          </button>
+
+          <p class="description">
+            Eid Takbir starts at 8:30 AM followed by Eid Salat at 9:00 AM.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Community Information / Accordion Section ENDS HERE -->
 
 
     <!-- Masjid History STARTS HERE -->
@@ -268,6 +270,8 @@
     <script src="home-page-javascript/accordion.js"></script>
     <script src="home-page-javascript/popup-navigation.js"></script>
     <script src="home-page-javascript/prayer-times.js"></script>
+    <script src="home-page-javascript/flyer-lightbox.js"></script>
+    <script src="home-page-javascript/donation-event.js"></script>
     <!--<script src="home-page-javascript/donation.js"></script>-->
 
   </body>
