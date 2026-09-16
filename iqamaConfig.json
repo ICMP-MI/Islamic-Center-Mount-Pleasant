@@ -1,0 +1,11 @@
+{
+  "_readme": "See docs/iqama-config.md for how to edit this file.",
+  "defaultIqamaOffsetMinutes": 10,
+  "prayers": {
+    "fajr": { "offsetMinutes": 10 },
+    "dhuhr": { "offsetMinutes": 10 },
+    "asr": { "offsetMinutes": 10 },
+    "maghrib": { "offsetMinutes": 5 },
+    "isha": { "offsetMinutes": 10 }
+  }
+}

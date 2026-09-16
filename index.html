@@ -5,6 +5,7 @@
 <html lang="en">
   <head>
 
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>ICMP</title>
@@ -15,6 +16,7 @@
     <link rel="stylesheet" href="home-page-css/announcement.css">
     <link rel="stylesheet" href="home-page-css/accordion.css">
     <link rel="stylesheet" href="home-page-css/donation.css">
+    <link rel="stylesheet" href="home-page-css/prayer-times.css">
 
 
 
@@ -77,29 +79,72 @@
 
 
     
-    <!-- General Information Div: Split into two sections - prayer times and accordion tabs -->
-    
+    <!-- Prayer Times STARTS HERE -->
+    <!-- Athan times are fetched live from the Aladhan API; Iqama times are computed from iqamaConfig.json. -->
+    <!-- See docs/prayer-times.md and docs/iqama-config.md for how this works and how to change settings. -->
+
+    <div class="prayer-times-strip">
+      <h2 class="prayer-times-title" id="prayer-times-heading">Today's Prayer Times</h2>
+      <div class="prayer-times-grid" role="group" aria-labelledby="prayer-times-heading">
+        <div class="prayer-times-cell">
+          <h3 class="prayer-times-name">Fajr</h3>
+          <p class="prayer-times-row"><span class="prayer-times-label">Athan</span><span id="athan-fajr">Loading…</span></p>
+          <p class="prayer-times-row"><span class="prayer-times-label">Iqama</span><span id="iqama-fajr">Loading…</span></p>
+        </div>
+        <div class="prayer-times-cell">
+          <h3 class="prayer-times-name">Sunrise</h3>
+          <p class="prayer-times-row"><span class="prayer-times-label">Athan</span><span id="athan-sunrise">Loading…</span></p>
+          <p class="prayer-times-row"><span class="prayer-times-label">Iqama</span><span>—</span></p>
+        </div>
+        <div class="prayer-times-cell">
+          <h3 class="prayer-times-name">Dhuhr</h3>
+          <p class="prayer-times-row"><span class="prayer-times-label">Athan</span><span id="athan-dhuhr">Loading…</span></p>
+          <p class="prayer-times-row"><span class="prayer-times-label">Iqama</span><span id="iqama-dhuhr">Loading…</span></p>
+        </div>
+        <div class="prayer-times-cell">
+          <h3 class="prayer-times-name">Asr</h3>
+          <p class="prayer-times-row"><span class="prayer-times-label">Athan</span><span id="athan-asr">Loading…</span></p>
+          <p class="prayer-times-row"><span class="prayer-times-label">Iqama</span><span id="iqama-asr">Loading…</span></p>
+        </div>
+        <div class="prayer-times-cell">
+          <h3 class="prayer-times-name">Maghrib</h3>
+          <p class="prayer-times-row"><span class="prayer-times-label">Athan</span><span id="athan-maghrib">Loading…</span></p>
+          <p class="prayer-times-row"><span class="prayer-times-label">Iqama</span><span id="iqama-maghrib">Loading…</span></p>
+        </div>
+        <div class="prayer-times-cell">
+          <h3 class="prayer-times-name">Isha</h3>
+          <p class="prayer-times-row"><span class="prayer-times-label">Athan</span><span id="athan-isha">Loading…</span></p>
+          <p class="prayer-times-row"><span class="prayer-times-label">Iqama</span><span id="iqama-isha">Loading…</span></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Prayer Times ENDS HERE -->
+
+
+    <!-- General Information Div: Split into two sections - donations and accordion tabs -->
+
     <div class="general-information">
 
-      <!-- Iqama Times STARTS HERE -->
+      <!-- Donation Section STARTS HERE -->
 
-      <div class="prayer-times-div">
-        <h2 class="prayer-times-title"> Iqama Times</h2>
-        <div style="height: 3px; background-color: maroon; width: 100%; margin: 3px auto;"></div>
-        <div class="prayer-times-line">Fajr :&nbsp;&nbsp;&nbsp;&nbsp;6:45 AM</div>
-        <div class="prayer-times-line">Sunrise :&nbsp;&nbsp;&nbsp;&nbsp;08:04 AM</div>
-        <div class="prayer-times-line">Dhuhr :&nbsp;&nbsp;&nbsp;&nbsp;02:00 PM</div>
-        <div class="prayer-times-line">Asr :&nbsp;&nbsp;&nbsp;&nbsp;03:30 PM</div>
-        <div class="prayer-times-line">Maghreb :&nbsp;&nbsp;&nbsp;&nbsp;5 min after athan</div>
-        <div class="prayer-times-line">Ishaa :&nbsp;&nbsp;&nbsp;&nbsp;7:30 PM</div>
+      <div class="donation-info-div">
+        <h2 class="donation-info-title">Donations</h2>
+        <a href="https://gofund.me/519aa6a79" target="_blank" rel="noopener noreferrer">
+          <img src="images-and-icons/Donation.jpeg" class="donation-img" alt="Donation">
+        </a>
+
+        <a href="https://gofund.me/519aa6a79" class="donation-link" target="_blank" rel="noopener noreferrer">
+          Go To Fund Link
+        </a>
       </div>
 
-      <!-- Iqama Times ENDS HERE -->
+      <!-- Donation Section ENDS HERE -->
 
       <!-- Accordion Block STARTS HERE-->
 
       <div class="accordion-info-div">
-        
+
         <div class="accordion">
           <div class="accordion-content">
             <button type="button">
@@ -110,22 +155,6 @@
             <p class="description">
               Khutbah starts at 2:00PM on Fridays and Jummah prayer is dependent on our Khateebs, but usual start time is 2:25PM
             </p>
-          </div>
-
-          <div class="accordion-content">
-            <button type="button" class="accordion-header">
-              <span class="title">Donations</span>
-            </button>
-          
-            <div class="accordion-body">
-              <a href="https://gofund.me/519aa6a79" target="_blank" rel="noopener noreferrer">
-                <img src="images-and-icons/Donation.jpeg" class="donation-img" alt="Donation">
-              </a>
-
-              <a href="https://gofund.me/519aa6a79" class="donation-link" target="_blank" rel="noopener noreferrer">
-                Go To Fund Link
-              </a>
-            </div>
           </div>
 
           <div class="accordion-content">
@@ -238,6 +267,7 @@
     <script src="home-page-javascript/announcement.js"></script>
     <script src="home-page-javascript/accordion.js"></script>
     <script src="home-page-javascript/popup-navigation.js"></script>
+    <script src="home-page-javascript/prayer-times.js"></script>
     <!--<script src="home-page-javascript/donation.js"></script>-->
 
   </body>

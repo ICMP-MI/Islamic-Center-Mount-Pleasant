@@ -15,42 +15,18 @@
   padding: 20px;
 }
 
-
-
-
-.prayer-times-div {
-  background-color: rgb(255, 200, 46);
+.donation-info-div {
+  background-color: rgb(106, 0, 50);
   color: rgb(106, 0, 50);
   flex: 1;
-  font-family: 'Amiri', serif;
-
-}
-.prayer-times-line {
-  transition: all 0.3s ease;
-  padding: .5rem 0;
-  font-size: 1.563rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
   text-align: center;
-  line-height: 2;
-  font-weight: bold;
-  margin-top: -0px;
 }
 
-.prayer-times-line:hover {
-  background-color: rgb(106, 0, 50); /* Maroon background on hover */
-  color: rgb(255, 200, 46); /* CMU gold text on hover */
-  cursor: default;
-  transition: all 0.25s ease-in-out;
-}
-.prayer-times-title{
-
-  font-size: 3.125rem;
-  text-align: center;
-  padding-bottom: 0px;
-  margin-bottom: .625rem,;
-  margin-top: .625rem;
-  margin-bottom: 50px;
-
-}
 
 
 

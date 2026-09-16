@@ -38,6 +38,7 @@
   cursor: pointer;
   font-size: 18px;
   background-color: rgb(106, 0, 50);
+  color: white;
   font-weight: bold;
   transition: background-color 0.2s ease-in-out;
 }

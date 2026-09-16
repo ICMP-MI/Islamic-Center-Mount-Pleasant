@@ -1,3 +1,10 @@
+.donation-info-title {
+  font-family: 'Amiri', serif;
+  font-size: 2rem;
+  margin: 0 0 .5rem;
+  color: white;
+}
+
 .accordion-body{
   max-height:1000px;   /* allow content to show */
   overflow:hidden;
@@ -22,7 +29,7 @@
   display:inline-block;
   margin-top:20px;
   margin-bottom: 20px;
-  color:#0066cc;
+  color: white;
   font-weight:bold;
   text-decoration:underline;
 }

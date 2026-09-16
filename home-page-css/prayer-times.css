@@ -1,0 +1,73 @@
+/* prayer-times.css */
+/* Styles for the "Today's Prayer Times" horizontal Athan + Iqama strip. */
+/* See docs/prayer-times.md for how the data behind this strip is calculated. */
+
+.prayer-times-strip {
+  background-color: rgb(255, 200, 46);
+  color: rgb(106, 0, 50);
+  font-family: 'Amiri', serif;
+  padding: 1.5rem 1rem 2rem;
+}
+
+.prayer-times-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.prayer-times-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.prayer-times-cell {
+  box-sizing: border-box;
+  background-color: rgb(106, 0, 50);
+  color: rgb(255, 200, 46);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  padding: 1rem 1.25rem;
+  flex: 1 1 150px;
+  min-width: 140px;
+  max-width: 200px;
+  text-align: center;
+}
+
+.prayer-times-name {
+  margin: 0 0 .6rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding-bottom: .4rem;
+  border-bottom: 1px solid rgba(255, 200, 46, 0.4);
+}
+
+.prayer-times-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: .35rem 0;
+  font-size: 1rem;
+}
+
+.prayer-times-label {
+  font-size: .75rem;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  color: rgba(255, 200, 46, 0.75);
+}
+
+@media (max-width: 600px) {
+  .prayer-times-title {
+    font-size: 1.9rem;
+  }
+
+  .prayer-times-cell {
+    flex: 1 1 130px;
+    min-width: 130px;
+  }
+}
