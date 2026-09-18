@@ -1,0 +1,58 @@
+/* theme-accents.css */
+/* Cross-section visual rhythm system introduced alongside the "maroon reserved
+   for anchor sections" redesign: a consistent gold rule at every section
+   transition, small-caps kicker labels above each section's heading, and a
+   very low-opacity geometric texture tying the maroon and off-white sections
+   together. This lives in its own file (rather than each section's own CSS)
+   because it's a single system applied across multiple sections, not specific
+   to any one of them. */
+
+/* A repeated gold hairline at the top of every major section below the
+   Bismillah opening, so each color transition on the page carries the same
+   signature instead of being a one-off. (Bismillah itself needs none since it
+   follows the header directly with no color change.) */
+.prayer-times-strip,
+.featured-donation,
+.info-section,
+.history-section {
+  border-top: 3px solid rgb(255, 200, 46);
+}
+
+.kicker {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 0.6rem;
+}
+
+.kicker--on-cream {
+  color: rgb(106, 0, 50);
+  opacity: 0.7;
+}
+
+.kicker--on-maroon {
+  color: rgb(255, 200, 46);
+  opacity: 0.85;
+}
+
+/* Very subtle geometric texture (two overlapping squares forming an 8-point
+   star outline — a generic Islamic-geometric motif, not tied to any specific
+   symbol), kept faint enough to read as texture rather than decoration.
+   Maroon-tinted on the off-white sections... */
+.prayer-times-strip,
+.info-section {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='none' stroke='%236A0032' stroke-width='1' stroke-opacity='0.028'%3E%3Crect x='30' y='30' width='60' height='60'/%3E%3Crect x='30' y='30' width='60' height='60' transform='rotate(45 60 60)'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: repeat;
+}
+
+/* ...gold-tinted on the maroon anchor sections. */
+.bismillah-section,
+.featured-donation,
+.history-section {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='none' stroke='%23FFC82E' stroke-width='1' stroke-opacity='0.035'%3E%3Crect x='30' y='30' width='60' height='60'/%3E%3Crect x='30' y='30' width='60' height='60' transform='rotate(45 60 60)'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: repeat;
+}

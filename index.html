@@ -10,6 +10,12 @@
 
     <title>ICMP</title>
 
+    <!-- Favicon / browser tab icon -->
+    <!-- Gold mosque silhouette, background removed, cropped/padded to a square -->
+    <!-- canvas so it reads clearly at tab size. -->
+    <link rel="icon" type="image/png" href="images-and-icons/favicon-masjid-logo.png">
+    <link rel="apple-touch-icon" href="images-and-icons/favicon-masjid-logo.png">
+
     <!-- All CSS -->
     <link rel="stylesheet" href="home-page-css/home.css">
     <link rel="stylesheet" href="home-page-css/generalHome.css">
@@ -17,12 +23,19 @@
     <link rel="stylesheet" href="home-page-css/accordion.css">
     <link rel="stylesheet" href="home-page-css/donation.css">
     <link rel="stylesheet" href="home-page-css/prayer-times.css">
+    <link rel="stylesheet" href="home-page-css/history.css">
+    <link rel="stylesheet" href="home-page-css/theme-accents.css">
 
 
 
     <!-- All Fonts -->
+    <!-- Amiri (headings, 400 + the 700 weight headings render at) and Montserrat -->
+    <!-- (body/label text) are the site's two typefaces; weights loaded match the -->
+    <!-- weights actually used across the CSS below. -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     
 
@@ -40,7 +53,7 @@
         </div>
       </div>
 
-      <button type="button" class="menu-icon-container">
+      <button type="button" class="menu-icon-container" aria-label="Open menu">
         <img src="images-and-icons/hamburger-menu-white.png" alt="">
       </button>
 
@@ -84,6 +97,7 @@
     <!-- See docs/prayer-times.md and docs/iqama-config.md for how this works and how to change settings. -->
 
     <div class="prayer-times-strip">
+      <span class="kicker kicker--on-cream">Daily Schedule</span>
       <h2 class="prayer-times-title" id="prayer-times-heading">Today's Prayer Times</h2>
       <div class="prayer-times-grid" role="group" aria-labelledby="prayer-times-heading">
         <div class="prayer-times-cell">
@@ -134,6 +148,7 @@
         </button>
       </div>
       <div class="featured-donation-content">
+        <span class="kicker kicker--on-maroon">Get Involved</span>
         <h2 class="featured-donation-title" id="donation-title">Donations</h2>
         <a href="https://gofund.me/519aa6a79" class="featured-donation-cta" id="donation-cta-link" target="_blank" rel="noopener noreferrer">
           Go To Fund Link
@@ -155,11 +170,12 @@
     <!-- Community Information / Accordion Section STARTS HERE -->
 
     <div class="info-section">
+      <span class="kicker kicker--on-cream">Stay Informed</span>
       <h2 class="info-section-title">Community Information</h2>
 
       <div class="accordion">
         <div class="accordion-content">
-          <button type="button">
+          <button type="button" aria-expanded="false">
             <span class="title">Jummah and Khutbah Information</span>
             <i class="fa-solid fa-plus"></i>
           </button>
@@ -170,7 +186,7 @@
         </div>
 
         <div class="accordion-content">
-          <button type="button">
+          <button type="button" aria-expanded="false">
             <span class="title">Join ICMP WhatsApp Community</span>
             <i class="fa-solid fa-plus"></i>
           </button>
@@ -182,7 +198,7 @@
         </div>
 
         <div class="accordion-content">
-          <button type="button">
+          <button type="button" aria-expanded="false">
             <span class="title">Eid Information</span>
             <i class="fa-solid fa-plus"></i>
           </button>
@@ -198,49 +214,102 @@
 
 
     <!-- Masjid History STARTS HERE -->
+    <!-- Timeline milestones group the original history paragraph into its own natural -->
+    <!-- narrative beats; wording is preserved verbatim, just presented in sections. -->
 
-    <div class="History">
+    <div class="history-section">
 
-      <h2 class="historytext">
-        Historical Background of the Mt. Pleasant Center
-      </h2>
-      <p class="text">
-        As more Muslim Students began coming to Central Michigan University
-        (CMU), many made Mt. Pleasant their second home. They felt a strong sense
-        of obligation to maintain their daily prayers. Initially, prayers were
-        held at various locations across the CMU campus. However, as the numbers
-        grew, so did the need to establish a more permanent and organized Muslim
-        community. With the dedication and commitment of a group of Muslim
-        student brothers, they purchased a residential property in late 1979
-        using their own funds. This marked the founding of the Mt.Pleasant
-        Islamic Center - the first of its kind in Mid-Michigan. Over the years,
-        numerous renovations have taken place to accommodate the growing needs
-        of the community. A separate parking lot was added after overcoming some
-        legal challenge with the help of Allah. The garage was converted into
-        additional prayer space, more bathrooms were built ,and a dedicated
-        prayer area for sisters was established. The masjid has since attracted
-        more brothers from surrounding communities. It has hosted community
-        dinners, especially during Ramadan, often neighbors to join in the
-        spirit of togetherness. Over the years, the masjid has been visited by
-        various scholars and imams and has continued to enjoy the support of its
-        neighbors and the local community. Having served the community for
-        nearly half a century, the Mt, Pleasant Islamic Center stands as a
-        beacon of light and guidance for Muslims in Mid-Michigan. We warmly
-        invite all brothers and sisters to become active and engaged members. We
-        are all entrusted with keeping this torch burning for generations to
-        come, in shaa Allah. The masjid offers daily prayers throughout the week
-        and holds Jumu'ah (Friday prayer) at 2:00 PM year-round. Your financial
-        support is deeply appreciated as the masjid is independently operated
-        without funding from any organization or agency.
-      </p>
+      <span class="kicker kicker--on-maroon">Our Story</span>
+      <h2 class="history-heading">Historical Background of the Mt. Pleasant Center</h2>
 
-      <p class="DoorLocked">
+      <div class="history-timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-text">
+            <span class="timeline-label">1979 &mdash; Founding</span>
+            <p>
+              As more Muslim Students began coming to Central Michigan University
+              (CMU), many made Mt. Pleasant their second home. They felt a strong sense
+              of obligation to maintain their daily prayers. Initially, prayers were
+              held at various locations across the CMU campus. However, as the numbers
+              grew, so did the need to establish a more permanent and organized Muslim
+              community. With the dedication and commitment of a group of Muslim
+              student brothers, they purchased a residential property in late 1979
+              using their own funds. This marked the founding of the Mt.Pleasant
+              Islamic Center - the first of its kind in Mid-Michigan.
+            </p>
+          </div>
+          <div class="timeline-marker-col"><span class="timeline-marker"></span></div>
+          <!-- PLACEHOLDER — replace images-and-icons/history-exterior.jpg with the real -->
+          <!-- exterior photo (same filename/aspect ratio) to update this automatically. -->
+          <div class="timeline-media">
+            <img src="images-and-icons/history-exterior.jpg" alt="Exterior of the Mt. Pleasant Islamic Center">
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <!-- PLACEHOLDER — replace images-and-icons/history-interior.jpg with the real -->
+          <!-- interior photo (same filename/aspect ratio) to update this automatically. -->
+          <div class="timeline-media">
+            <img src="images-and-icons/history-interior.jpg" alt="Prayer space inside the Mt. Pleasant Islamic Center">
+          </div>
+          <div class="timeline-marker-col"><span class="timeline-marker"></span></div>
+          <div class="timeline-text">
+            <span class="timeline-label">Growth &mdash; Renovations</span>
+            <p>
+              Over the years, numerous renovations have taken place to accommodate the
+              growing needs of the community. A separate parking lot was added after
+              overcoming some legal challenge with the help of Allah. The garage was
+              converted into additional prayer space, more bathrooms were built ,and a
+              dedicated prayer area for sisters was established.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-text">
+            <span class="timeline-label">Community</span>
+            <p>
+              The masjid has since attracted more brothers from surrounding
+              communities. It has hosted community dinners, especially during
+              Ramadan, often neighbors to join in the spirit of togetherness. Over
+              the years, the masjid has been visited by various scholars and imams
+              and has continued to enjoy the support of its neighbors and the local
+              community.
+            </p>
+          </div>
+          <div class="timeline-marker-col"><span class="timeline-marker"></span></div>
+          <div class="timeline-media"></div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-media"></div>
+          <div class="timeline-marker-col"><span class="timeline-marker timeline-marker-final"></span></div>
+          <div class="timeline-text">
+            <span class="timeline-label">Today</span>
+            <p>
+              Having served the community for nearly half a century, the Mt, Pleasant
+              Islamic Center stands as a beacon of light and guidance for Muslims in
+              Mid-Michigan. We warmly invite all brothers and sisters to become active
+              and engaged members. We are all entrusted with keeping this torch
+              burning for generations to come, in shaa Allah. The masjid offers daily
+              prayers throughout the week and holds Jumu'ah (Friday prayer) at 2:00 PM
+              year-round. Your financial support is deeply appreciated as the masjid
+              is independently operated without funding from any organization or
+              agency.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <p class="history-note">
         For safety reasons, the doors are locked after prayer times. If you need
         access to the masjid, please contact us and we will arrange to unlock
         the doors for you.
       </p>
     </div>
-    
+
     <!-- Masjid History ENDS HERE -->
 
 
@@ -249,7 +318,7 @@
 
     <div id="menu-popup" class="menu-popup hidden">
       <div class="menu-content">
-        <button type="button" class="close-btn">&times;</button>
+        <button type="button" class="close-btn" aria-label="Close menu">&times;</button>
         <!-- 
         <ul>
           <li><a href="home.html">Home</a></li>
@@ -272,7 +341,6 @@
     <script src="home-page-javascript/prayer-times.js"></script>
     <script src="home-page-javascript/flyer-lightbox.js"></script>
     <script src="home-page-javascript/donation-event.js"></script>
-    <!--<script src="home-page-javascript/donation.js"></script>-->
 
   </body>
 </html>

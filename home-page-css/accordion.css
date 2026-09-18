@@ -1,12 +1,15 @@
-/* Full-width section wrapping the accordion below the Donation/Event band */
+/* Full-width section wrapping the accordion below the Donation/Event band.
+   Off-white rather than maroon: the Accordion block itself (below) keeps its
+   maroon fill, so it reads as a contained anchor sitting inside this neutral
+   section rather than blending into a solid maroon background. */
 .info-section {
-  background-color: rgb(106, 0, 50);
+  background-color: rgb(250, 248, 240);
   padding: 2.5rem 1.5rem 3rem;
 }
 
 .info-section-title {
   font-family: 'Amiri', serif;
-  color: white;
+  color: rgb(106, 0, 50);
   text-align: center;
   font-size: 2.25rem;
   margin: 0 0 1.5rem;
@@ -25,7 +28,7 @@
 
 .accordion .accordion-content {
   background-color: rgb(106, 0, 50);
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid rgba(255, 200, 46, 0.25);
   overflow: hidden;
   transition: all 0.3s ease;
 }
@@ -93,7 +96,7 @@
   font-size: 15px;
   font-weight: 400;
   padding: 0 20px;
-  color: #333;
+  color: rgb(106, 0, 50);
   height: 0;
   transition: height 0.3s ease, padding 0.3s ease;
   overflow: hidden;
@@ -101,6 +104,11 @@
 
 .accordion-content.open .description {
   padding: 15px 20px;
-  color: rgb(106, 0, 50);
+}
+
+@media (max-width: 600px) {
+  .info-section-title {
+    font-size: 1.9rem;
+  }
 }
 

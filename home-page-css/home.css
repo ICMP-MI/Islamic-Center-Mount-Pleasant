@@ -85,6 +85,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: 'Amiri', serif;
   font-size: 1.4rem;
   padding: 0;
   margin: 0;
@@ -93,14 +94,25 @@ body {
   flex-direction: column;
   overflow: hidden;
   color: rgb(106, 0, 50);
+  cursor: pointer;
+}
+
+/* The browser's default auto-color focus ring is low-contrast on this gold
+   background, so this gets an explicit one now that the banner is keyboard-
+   focusable (see announcement.js). box-shadow (not outline) so it's guaranteed
+   to render inside the banner's own box. */
+.annoucements-div:focus-visible {
+  box-shadow: inset 0 0 0 3px rgb(106, 0, 50);
 }
 
 .annoucements-toggle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
   padding: 0;
   margin: 0;
   padding-left: .5rem;
   text-decoration: underline;
-  
+
 }
 
 .annoucements-toggle:hover {

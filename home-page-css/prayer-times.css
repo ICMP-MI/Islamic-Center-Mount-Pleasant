@@ -3,7 +3,11 @@
 /* See docs/prayer-times.md for how the data behind this strip is calculated. */
 
 .prayer-times-strip {
-  background-color: rgb(255, 200, 46);
+  /* Off-white rather than solid gold: maroon is reserved for the page's anchor
+     sections (header/Bismillah, Donation, History), so this section sits on
+     the same neutral canvas as Community Information, with the maroon cards
+     below reading as an accent rather than a maroon-on-gold combination. */
+  background-color: rgb(250, 248, 240);
   color: rgb(106, 0, 50);
   font-family: 'Amiri', serif;
   padding: 1.5rem 1rem 2rem;
@@ -30,7 +34,7 @@
   background-color: rgb(106, 0, 50);
   color: rgb(255, 200, 46);
   border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 15px rgba(106, 0, 50, 0.12);
   padding: 1rem 1.25rem;
   flex: 1 1 150px;
   min-width: 140px;

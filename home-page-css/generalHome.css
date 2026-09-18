@@ -1,48 +1,5 @@
 /* generalHome.css */
 
-.History{
-  background-color: rgb(106, 0, 50);
-  text-align: center;
-  font-size: large;
-
-  margin: 0;
-  padding: 20px 0;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  
-}
-.historytext{
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-top: 24px;
-  margin-bottom: 24px;
-  margin-right: 20px;
-  text-align: center;
-  color: white;
-
-}
-.text{
-  color: white;
-  font-size: medium;
-  line-height: 25px;
-  /*width: 1350px;*/
-  padding: 0 2.188rem;
-  text-align: center;
-  
-}
-
-.DoorLocked {
- font-weight: bold;
- text-align: center;
- color: white;
- padding: 0 2.188rem;
-}
-
-
-
 /* Popup Navigation code starts here */
 
 .menu-popup {
@@ -68,6 +25,7 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.5);
   background-color: rgb(106, 0, 50);
   color: white;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .menu-content ul {

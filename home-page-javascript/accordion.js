@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
       let description = item.querySelector(".description");
       let icon = item.querySelector("i");
       if(item.classList.contains(`open`)) {
+        header.setAttribute("aria-expanded", "true");
         if (description) {
           description.style.height = `${description.scrollHeight}px`;
         }
@@ -21,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }
       else {
+        header.setAttribute("aria-expanded", "false");
         if (description) {
           description.style.height = "0px";
         }
@@ -39,6 +41,10 @@ document.addEventListener("DOMContentLoaded", () => {
       if(index1 != index2) {
         item2.classList.remove("open");
 
+        let header2 = item2.querySelector("button");
+        if (header2) {
+          header2.setAttribute("aria-expanded", "false");
+        }
         let des = item2.querySelector(".description");
         if (des) {
           des.style.height = "0px";

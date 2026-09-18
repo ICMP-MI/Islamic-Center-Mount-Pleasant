@@ -19,8 +19,11 @@ fetch('./mainAnnouncement.json')
       if(json.title && json.message) {
 
         // Generate annoucement header html
+        // role/tabindex make this keyboard-focusable since it's a div acting as a
+        // button; the keydown listener below makes Enter/Space activate it the
+        // same way a click does.
         let annoucementHeaderHTML = `
-          <div id="main-announcement" class="annoucements-div" onclick="openPopup()">
+          <div id="main-announcement" class="annoucements-div" onclick="openPopup()" role="button" tabindex="0">
             ${json.title}
             <div class="annoucements-toggle">view details</div>
           </div>
@@ -58,6 +61,18 @@ fetch('./mainAnnouncement.json')
         const popupCloseBtn = document.querySelector(".popup-close");
         if (popupCloseBtn) {
           popupCloseBtn.addEventListener("click", closePopup);
+        }
+
+        // The banner is a div (not a <button>) so it needs an explicit key handler
+        // to be operable from the keyboard, matching its onclick behavior above.
+        const mainAnnouncementEl = document.getElementById("main-announcement");
+        if (mainAnnouncementEl) {
+          mainAnnouncementEl.addEventListener("keydown", (e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              openPopup();
+            }
+          });
         }
 
         console.log("Backend Announcements Loaded Succesfully")
