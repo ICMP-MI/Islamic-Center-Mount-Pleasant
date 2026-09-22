@@ -4,17 +4,20 @@
    transition, small-caps kicker labels above each section's heading, and a
    very low-opacity geometric texture tying the maroon and off-white sections
    together. This lives in its own file (rather than each section's own CSS)
-   because it's a single system applied across multiple sections, not specific
-   to any one of them. */
+   because it's a single system shared across pages, not specific to any one
+   section or page. Used by index.html and get-involved.html. */
 
-/* A repeated gold hairline at the top of every major section below the
-   Bismillah opening, so each color transition on the page carries the same
-   signature instead of being a one-off. (Bismillah itself needs none since it
-   follows the header directly with no color change.) */
+/* A repeated gold hairline at the top of every major section that follows an
+   anchor-colored (maroon) one, so each color transition carries the same
+   signature instead of being a one-off. Sections that follow the header or
+   another maroon section directly (Bismillah, the Get Involved hero) need
+   none since there's no color change to mark. */
 .prayer-times-strip,
 .featured-donation,
 .info-section,
-.history-section {
+.history-section,
+.new-to-area-section,
+.volunteer-section {
   border-top: 3px solid rgb(255, 200, 46);
 }
 
@@ -44,7 +47,8 @@
    symbol), kept faint enough to read as texture rather than decoration.
    Maroon-tinted on the off-white sections... */
 .prayer-times-strip,
-.info-section {
+.info-section,
+.new-to-area-section {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='none' stroke='%236A0032' stroke-width='1' stroke-opacity='0.028'%3E%3Crect x='30' y='30' width='60' height='60'/%3E%3Crect x='30' y='30' width='60' height='60' transform='rotate(45 60 60)'/%3E%3C/g%3E%3C/svg%3E");
   background-repeat: repeat;
 }
@@ -52,7 +56,9 @@
 /* ...gold-tinted on the maroon anchor sections. */
 .bismillah-section,
 .featured-donation,
-.history-section {
+.history-section,
+.get-involved-hero,
+.volunteer-section {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='none' stroke='%23FFC82E' stroke-width='1' stroke-opacity='0.035'%3E%3Crect x='30' y='30' width='60' height='60'/%3E%3Crect x='30' y='30' width='60' height='60' transform='rotate(45 60 60)'/%3E%3C/g%3E%3C/svg%3E");
   background-repeat: repeat;
 }

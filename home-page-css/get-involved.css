@@ -1,0 +1,275 @@
+/* get-involved.css */
+/* Styles specific to the "Get Involved" page (get-involved.html): the hero +
+   dispatch cards, the New to the Area section, and the Volunteer section.
+   Shared cross-page rhythm (gold rule dividers, kicker labels, subtle
+   geometric texture) comes from theme-accents.css, not this file. */
+
+/* Anchor jumps land a little below the very top of the section, and land
+   smoothly rather than snapping instantly. Scoped to this page only since
+   it's only linked here. */
+html {
+  scroll-behavior: smooth;
+}
+
+#new-to-the-area,
+#volunteer {
+  scroll-margin-top: 1rem;
+}
+
+/* ---- Hero + dispatch cards ---- */
+
+.get-involved-hero {
+  background-color: rgb(106, 0, 50);
+  padding: 3rem 1.5rem 3.5rem;
+  text-align: center;
+}
+
+.get-involved-heading {
+  font-family: 'Amiri', serif;
+  color: white;
+  font-size: 2.75rem;
+  margin: 0 0 1rem;
+}
+
+.get-involved-intro {
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.dispatch-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.25rem;
+  max-width: 700px;
+  margin: 2.5rem auto 0;
+}
+
+.dispatch-card {
+  flex: 1 1 260px;
+  max-width: 320px;
+  display: block;
+  background-color: rgb(250, 248, 240);
+  color: rgb(106, 0, 50);
+  text-decoration: none;
+  border: 1px solid rgba(255, 200, 46, 0.5);
+  border-radius: 10px;
+  padding: 1.5rem 1.25rem;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.15s ease;
+}
+
+.dispatch-card:hover,
+.dispatch-card:focus-visible {
+  transform: translateY(-3px);
+}
+
+.dispatch-card-title {
+  display: block;
+  font-family: 'Amiri', serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-bottom: 0.4rem;
+}
+
+.dispatch-card-desc {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.88rem;
+  color: rgb(106, 0, 50);
+  opacity: 0.85;
+  line-height: 1.5;
+}
+
+/* ---- New to the Area ---- */
+
+.new-to-area-section {
+  background-color: rgb(250, 248, 240);
+  padding: 3rem 1.5rem 3.5rem;
+}
+
+.new-to-area-heading {
+  font-family: 'Amiri', serif;
+  color: rgb(106, 0, 50);
+  text-align: center;
+  font-size: 2.25rem;
+  margin: 0 0 1.5rem;
+}
+
+.new-to-area-intro {
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(106, 0, 50);
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.65;
+}
+
+.new-to-area-content {
+  max-width: 760px;
+  margin: 2.5rem auto 0;
+}
+
+.new-to-area-content h3 {
+  font-family: 'Amiri', serif;
+  color: rgb(106, 0, 50);
+  font-size: 1.35rem;
+  margin: 2.25rem 0 0.75rem;
+}
+
+.new-to-area-content h4 {
+  font-family: 'Amiri', serif;
+  color: rgb(106, 0, 50);
+  font-size: 1.15rem;
+  margin: 1.75rem 0 0.5rem;
+}
+
+/* Mount Pleasant's own box: same border/framing language as the dispatch
+   cards and volunteer cards elsewhere on this page, used here to make the
+   local option noticeably more prominent than the Mid-Michigan section
+   below it without introducing a different visual system. */
+.local-highlight {
+  border: 2px solid rgb(255, 200, 46);
+  border-radius: 10px;
+  padding: 1.5rem 1.75rem 1.75rem;
+  box-shadow: 0 4px 15px rgba(106, 0, 50, 0.1);
+}
+
+.local-highlight h3 {
+  margin-top: 0;
+  font-size: 1.6rem;
+}
+
+/* Small label distinguishing "Halal Food" from "Halal Grocer(s)" within a
+   given location, without introducing another heading level. Specificity
+   note: needs to beat ".new-to-area-content p" below, hence the compound
+   selector rather than ".resource-category" alone. */
+.new-to-area-content .resource-category {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: rgba(106, 0, 50, 0.7);
+  margin: 1.1rem 0 0.4rem;
+}
+
+.new-to-area-content p {
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(106, 0, 50);
+  line-height: 1.65;
+  margin: 0 0 0.9rem;
+}
+
+.new-to-area-content a {
+  color: rgb(106, 0, 50);
+  font-weight: 600;
+}
+
+.resource-list {
+  margin: 0 0 0.9rem;
+  padding-left: 1.25rem;
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(106, 0, 50);
+  line-height: 1.65;
+}
+
+.resource-list li {
+  margin-bottom: 0.5rem;
+}
+
+/* ---- Volunteer ---- */
+
+.volunteer-section {
+  background-color: rgb(106, 0, 50);
+  padding: 3rem 1.5rem 3.5rem;
+}
+
+.volunteer-heading {
+  font-family: 'Amiri', serif;
+  color: white;
+  text-align: center;
+  font-size: 2.25rem;
+  margin: 0 0 1.5rem;
+}
+
+.volunteer-intro {
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.65;
+}
+
+.volunteer-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 2.5rem auto 0;
+}
+
+.volunteer-card {
+  flex: 1 1 260px;
+  max-width: 320px;
+  background-color: rgb(250, 248, 240);
+  border-top: 4px solid rgb(255, 200, 46);
+  border-radius: 0 0 10px 10px;
+  padding: 1.5rem 1.25rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  text-align: left;
+}
+
+.volunteer-card h3 {
+  font-family: 'Amiri', serif;
+  color: rgb(106, 0, 50);
+  font-size: 1.2rem;
+  margin: 0 0 0.6rem;
+}
+
+.volunteer-card p {
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(106, 0, 50);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  margin: 0 0 1rem;
+}
+
+.volunteer-card p:last-child {
+  margin-bottom: 0;
+}
+
+.volunteer-cta {
+  display: inline-block;
+  background-color: rgb(255, 200, 46);
+  color: rgb(106, 0, 50);
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0.6rem 1.25rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  transition: transform 0.15s ease;
+}
+
+.volunteer-cta:hover,
+.volunteer-cta:focus-visible {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .get-involved-heading {
+    font-size: 2rem;
+  }
+
+  .new-to-area-heading,
+  .volunteer-heading {
+    font-size: 1.9rem;
+  }
+}
