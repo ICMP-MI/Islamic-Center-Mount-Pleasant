@@ -1,30 +1,48 @@
 /* generalHome.css */
 
 /* Popup Navigation code starts here */
+/* Anchored dropdown rather than a centered full-screen modal: .menu-popup is
+   a plain positioning/animation wrapper (no visible chrome of its own),
+   anchored to the bottom-right of .header (see home.css's ".header { position:
+   relative }"); .menu-content is the actual visible panel. */
 
 .menu-popup {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.8);
+  position: absolute;
+  top: 100%;
+  right: 1.5rem;
   z-index: 999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+/* .hidden (below) is a generic display:none utility elsewhere on the site;
+   this overrides display specifically here so opacity/transform can actually
+   animate instead of snapping instantly. visibility:hidden (not just
+   opacity:0) also takes the menu and its links out of the tab order while
+   closed, so a hidden menu can't be silently reached by keyboard. */
+.menu-popup.hidden {
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-8px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .menu-popup {
+    transition: none;
+  }
 }
 
 .menu-content {
-  background: white;
-  padding: 30px;
+  background-color: rgb(250, 248, 240);
+  border: 1px solid rgba(255, 200, 46, 0.5);
   border-radius: 10px;
-  text-align: center;
-  width: 80%;
-  max-width: 300px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.5);
-  background-color: rgb(106, 0, 50);
-  color: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  min-width: 190px;
+  padding: 0.5rem;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -35,28 +53,29 @@
 }
 
 .menu-content li {
-  margin: 15px 0;
+  margin: 0;
 }
 
 .menu-content a {
+  display: block;
+  padding: 0.85rem 1.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgb(106, 0, 50);
   text-decoration: none;
-  color: white;
-  font-size: 18px;
-  font-weight: bold;
+  border-radius: 6px;
+  transition: background-color 0.15s ease, color 0.15s ease;
 }
 
-.close-btn {
-  background: none;
-  border: none;
-  padding: 0;
-  margin: 0;
-  font: inherit;
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  font-size: 30px;
-  cursor: pointer;
-  color: white;
+.menu-content a:hover,
+.menu-content a:focus-visible {
+  background-color: rgb(255, 200, 46);
+  color: rgb(106, 0, 50);
+}
+
+.menu-content a[aria-current="page"] {
+  color: rgb(255, 200, 46);
+  background-color: rgb(106, 0, 50);
 }
 
 .hidden {

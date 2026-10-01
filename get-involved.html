@@ -37,13 +37,28 @@
 
       <div class="logo-icon-container">
         <div class="logo-img-container">
-          <img src="images-and-icons/MTPIC-Gold_text-removebg-preview.png" alt="Islamic Center of Mount Pleasant logo">
+          <a href="index.html" class="logo-link" aria-label="Home">
+            <img src="images-and-icons/MTPIC-Gold_text-removebg-preview.png" alt="Islamic Center of Mount Pleasant logo">
+          </a>
         </div>
       </div>
 
-      <button type="button" class="menu-icon-container" aria-label="Open menu">
+      <button type="button" class="menu-icon-container" aria-label="Open menu" aria-haspopup="true" aria-expanded="false" aria-controls="menu-popup">
         <img src="images-and-icons/hamburger-menu-white.png" alt="">
       </button>
+
+      <!-- Hamburger Navigation Dropdown STARTS HERE -->
+      <div id="menu-popup" class="menu-popup hidden">
+        <div class="menu-content">
+          <nav aria-label="Site">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="get-involved.html" aria-current="page">Get Involved</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <!-- Hamburger Navigation Dropdown ENDS HERE -->
 
     </div>
 
@@ -203,20 +218,6 @@
     </div>
 
     <!-- Volunteer ENDS HERE -->
-
-
-    <!-- Hamburger Navigation Menu Popup STARTS HERE -->
-
-    <div id="menu-popup" class="menu-popup hidden">
-      <div class="menu-content">
-        <button type="button" class="close-btn" aria-label="Close menu">&times;</button>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Hamburger Navigation Menu Popup ENDS HERE -->
 
 
     <script src="home-page-javascript/popup-navigation.js"></script>

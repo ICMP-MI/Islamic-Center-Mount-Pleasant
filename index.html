@@ -49,13 +49,28 @@
 
       <div class="logo-icon-container">
         <div class="logo-img-container">
-          <img src="images-and-icons/MTPIC-Gold_text-removebg-preview.png" alt="Islamic Center of Mount Pleasant logo">
+          <a href="index.html" class="logo-link" aria-label="Home">
+            <img src="images-and-icons/MTPIC-Gold_text-removebg-preview.png" alt="Islamic Center of Mount Pleasant logo">
+          </a>
         </div>
       </div>
 
-      <button type="button" class="menu-icon-container" aria-label="Open menu">
+      <button type="button" class="menu-icon-container" aria-label="Open menu" aria-haspopup="true" aria-expanded="false" aria-controls="menu-popup">
         <img src="images-and-icons/hamburger-menu-white.png" alt="">
       </button>
+
+      <!-- Hamburger Navigation Dropdown STARTS HERE -->
+      <div id="menu-popup" class="menu-popup hidden">
+        <div class="menu-content">
+          <nav aria-label="Site">
+            <ul>
+              <li><a href="index.html" aria-current="page">Home</a></li>
+              <li><a href="get-involved.html">Get Involved</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <!-- Hamburger Navigation Dropdown ENDS HERE -->
 
     </div>
 
@@ -311,24 +326,6 @@
     </div>
 
     <!-- Masjid History ENDS HERE -->
-
-
-
-    <!-- Hamburger Navigation Menu Popup STARTS HERE -->
-
-    <div id="menu-popup" class="menu-popup hidden">
-      <div class="menu-content">
-        <button type="button" class="close-btn" aria-label="Close menu">&times;</button>
-        <!-- Only real, built pages get a link here. More menu items (About,
-             Contact, etc.) get added as those pages are actually built, not
-             ahead of time. -->
-        <ul>
-          <li><a href="get-involved.html">Get Involved</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Hamburger Navigation Menu Popup ENDS HERE -->
 
 
     <script src="home-page-javascript/announcement.js"></script>

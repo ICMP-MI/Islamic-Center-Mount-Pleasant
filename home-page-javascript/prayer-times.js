@@ -21,9 +21,7 @@ const CALCULATION_METHOD = 2; // ISNA
 //   "shafii" -> earlier Asr time
 //
 // PLACEHOLDER — NOT YET CONFIRMED BY MOSQUE LEADERSHIP.
-// Hanafi is used here temporarily so the system is functional. This is a real
-// religious-practice decision (it can shift Asr by up to about an hour) and must
-// be confirmed by the mosque, not assumed by whoever edits this file.
+// Hanafi is used here temporarily so the system is functional.s
 // See docs/prayer-times.md for details before changing this.
 const ASR_SCHOOL = "hanafi"; // "hanafi" or "shafii"
 
