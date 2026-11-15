@@ -23,7 +23,7 @@ const CALCULATION_METHOD = 2; // ISNA
 // PLACEHOLDER — NOT YET CONFIRMED BY MOSQUE LEADERSHIP.
 // Hanafi is used here temporarily so the system is functional.s
 // See docs/prayer-times.md for details before changing this.
-const ASR_SCHOOL = "hanafi"; // "hanafi" or "shafii"
+const ASR_SCHOOL = "shafii"; // "hanafi" or "shafii"
 
 const ASR_SCHOOL_CODES = { hanafi: 1, shafii: 0 };
 
